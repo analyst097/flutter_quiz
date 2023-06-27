@@ -1,14 +1,13 @@
 import 'package:dice/quiz.dart';
 import 'package:flutter/material.dart';
 
-import 'models/quiz.model.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
 
   // This widget is the root of your application.

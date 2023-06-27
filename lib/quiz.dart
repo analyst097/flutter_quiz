@@ -1,8 +1,8 @@
 import 'dart:core';
 
 import 'package:dice/question.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 class QuizApp extends StatefulWidget {
   const QuizApp({super.key});
@@ -45,7 +45,7 @@ class _QuizAppState extends State<QuizApp> {
           child: Center(child: activeScreen),
         ),
       ),
-    );;
+    );
   }
 }
 
