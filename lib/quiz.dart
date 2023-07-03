@@ -21,9 +21,9 @@ class _QuizAppState extends State<QuizApp> {
     super.initState();
   }
 
-  void switchScreen(){
+  void switchScreen(Widget screen){
     setState(() {
-      activeScreen = const QuestionScreen();
+      activeScreen = screen;
     });
   }
 
@@ -53,7 +53,7 @@ class _QuizAppState extends State<QuizApp> {
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz ,{super.key});
 
-  final Function() startQuiz;
+  final Function startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class StartScreen extends StatelessWidget {
         const Text("Learn Flutter the fun way!", style: TextStyle(fontSize: 20, color: Colors.white),),
         const SizedBox(height: 30,),
         OutlinedButton.icon(
-            onPressed: () { startQuiz(); },
+            onPressed: () { startQuiz(const QuestionScreen()); },
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white
             ),
