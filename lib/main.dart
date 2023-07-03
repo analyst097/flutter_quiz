@@ -1,4 +1,4 @@
-import 'package:dice/quiz.dart';
+import 'package:dice/widgets/expenses.dart';
 import 'package:flutter/material.dart';
 
 
@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const QuizApp();
+    return const MaterialApp(
+      home: ExpensesScreen(),
+    );
   }
 
 }
