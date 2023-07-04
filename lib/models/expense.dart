@@ -20,6 +20,7 @@ enum Category{
 class Expense{
   Expense({
     required this.title,
+    this.description = "",
     required this.amount,
     required this.category,
     required this.tags,
@@ -27,6 +28,7 @@ class Expense{
 
   final String id;
   final String title;
+  final String description;
   final double amount;
   final DateTime dateTime;
   final Category category;

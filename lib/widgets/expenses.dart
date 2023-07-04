@@ -1,3 +1,4 @@
+import 'package:dice/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 
 import '../models/expense.dart';
@@ -40,10 +41,17 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
     ),
   ];
 
+  onAddExpense(Expense expense){
+    setState(() {
+      _expenses.add(expense);
+    });
+  }
+
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      isScrollControlled: true,
         context: context, 
-        builder: (ctx) => Text("Modal")
+        builder: (ctx) => NewExpense(onAddExpense: onAddExpense,)
     );
   }
 
